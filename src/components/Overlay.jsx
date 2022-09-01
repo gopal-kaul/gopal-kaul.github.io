@@ -1,5 +1,5 @@
-import { FiGithub, FiLinkedin } from "react-icons/fi";
-import { FaDiscord, FaSpotify } from "react-icons/fa";
+import { FiGithub, FiLinkedin } from "react-icons/fi/index";
+import { FaDiscord, FaSpotify } from "react-icons/fa/index";
 
 export default function Overlay() {
   return (
