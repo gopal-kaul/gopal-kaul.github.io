@@ -7,9 +7,9 @@ export default function About() {
           <hr className="text-4xl w-60" />
         </div>
         <div className="flex flex-col md:flex-row gap-4">
-          <div className="w-1/2">
+          <div className="md:w-1/2">
             <h1 className="text-2xl">
-              This is some placeholder text which contains information about me.
+              Hey, Gopal here! I&apos;m your friendly neighbourhood geek!
             </h1>
           </div>
           <div className="w/1-2">

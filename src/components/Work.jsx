@@ -25,23 +25,38 @@ export default function Work() {
     <div className="min-h-screen text-white">
       <div className="pt-32">
         <h3 className="text-3xl text-light">Previous Work Experience</h3>
-        <div className="flex flex-row pt-4 gap-4">
-          <div className="md:w-1/4 w-full flex flex-col">
+        <div className="flex flex-col md:flex-row pt-4 gap-4">
+          <div className="md:hidden flex flex-row">
+            {experience.map((item, idx) => (
+              <div
+                className={`${
+                  idx === selected
+                    ? "border-neonBlue text-neonBlue border-b-[3px] "
+                    : "border-light border-b-2"
+                }  px-2  transition-all  py-2`}
+                onClick={() => setSelected(idx)}
+                key={idx}
+              >
+                {item.company}
+              </div>
+            ))}
+          </div>
+          <div className="hidden md:w-1/4 md:flex md:flex-col">
             {experience.map((item, idx) => (
               <div
                 className={`${
                   idx === selected
                     ? "border-neonBlue text-neonBlue border-l-[3px] "
                     : "border-light border-l-2"
-                }  pl-4  transition-all  py-2`}
+                } pl-4  transition-all  py-2`}
                 onClick={() => setSelected(idx)}
-                key={item}
+                key={idx}
               >
                 {item.company}
               </div>
             ))}
           </div>
-          <div className="flex flex-col">
+          <div className="flex flex-col pt-6 md:pt-0">
             <h1 className="text-2xl text-light">
               {experience[selected].role}{" "}
               <span className="text-neonBlue">
