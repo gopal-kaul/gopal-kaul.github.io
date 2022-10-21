@@ -5,7 +5,7 @@ interface Frontmatter {
   date: String;
   draft: boolean;
 }
-import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md/index";
 import Overlay from "../../components/Overlay";
 export async function getStaticPaths({ paginate }) {
   const allPosts = await Astro.glob<Frontmatter>("../post/*.md");
