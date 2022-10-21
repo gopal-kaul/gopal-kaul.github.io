@@ -1,0 +1,79 @@
+---
+interface Frontmatter {
+  title: string;
+  description?: string;
+  date: String;
+  draft: boolean;
+}
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md";
+import Overlay from "../../components/Overlay";
+export async function getStaticPaths({ paginate }) {
+  const allPosts = await Astro.glob<Frontmatter>("../post/*.md");
+  const posts = allPosts
+    .filter((post) => !post.frontmatter.draft)
+    .sort(function (p1, p2) {
+      let a = p1.frontmatter.date.split("/");
+      let b = p2.frontmatter.date.split("/");
+      return (
+        parseInt(b[2]) - parseInt(a[2]) ||
+        parseInt(b[1]) - parseInt(a[1]) ||
+        parseInt(b[0]) - parseInt(a[0])
+      );
+    });
+  // Generate pages from our array of astronauts, with 2 to a page
+  return paginate(posts, { pageSize: 1 });
+}
+const { page } = Astro.props;
+---
+
+<html>
+  <head>
+    <!-- <meta rel="canonical" href={new URL(url, Astro.site).pathname} /> -->
+  </head>
+  <body class="bg-background mx-8 lg:mx-60 pt-32 text-white">
+    <h3 class="text-7xl font-bold text-neonBlue mb-4">My Blog</h3>
+    <p>My blog, where I pen down my thoughts.</p>
+    <ul class="list-none">
+      {
+        page.data.map((post) => {
+          return (
+            <a
+              href={post.url}
+              class="border-2 border-background no-underline hover:border-neonBlue px-5 py-2.5 rounded-md text-white flex flex-col"
+            >
+              <h3 class="font-semibold text-2xl text-neonBlue">
+                {post.frontmatter.title}
+              </h3>
+              <p class="text-white">Written on : {post.frontmatter.date}</p>
+              <p class="text-white">{post.frontmatter.description}</p>
+            </a>
+          );
+        })
+      }
+    </ul>
+    <div class="flex flex-row gap-2 pl-5">
+      {
+        page.url.prev ? (
+          <a
+            href={page.url.prev}
+            class="text-white flex flex-row items-center w-min"
+          >
+            <MdNavigateBefore /> Previous
+          </a>
+        ) : null
+      }
+      <p class="text-white">Page : {page.currentPage}</p>
+      {
+        page.url.next ? (
+          <a
+            href={page.url.next}
+            class="text-white flex flex-row items-center w-min"
+          >
+            Next <MdNavigateNext />
+          </a>
+        ) : null
+      }
+    </div>
+    <Overlay />
+  </body>
+</html>

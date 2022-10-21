@@ -1,0 +1,26 @@
+---
+import type { MarkdownLayoutProps } from "astro";
+import Overlay from "../components/Overlay";
+      import { IoArrowBack } from "react-icons/io5/index";
+type Props = MarkdownLayoutProps<{
+  title: string;
+  date: string;
+}>;
+const { frontmatter } = Astro.props;
+---
+
+<html>
+  <head>
+    <title>{frontmatter.title}</title>
+    <!-- <meta rel="canonical" href={new URL(url, Astro.site).pathname} /> -->
+  </head>
+  <body class="bg-background mx-8 lg:mx-60 pt-32 text-white">
+    <a class="flex flex-row gap-2 items-center" href="/blog">
+      Go Back <IoArrowBack />
+    </a>
+    <div class="prose prose-h1:text-neonBlue text-white max-w-none">
+      <slot />
+    </div>
+    <Overlay />
+  </body>
+</html>

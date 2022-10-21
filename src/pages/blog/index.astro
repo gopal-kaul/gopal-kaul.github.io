@@ -1,0 +1,57 @@
+---
+interface Frontmatter {
+  title: string;
+  description?: string;
+  date: String;
+  draft: boolean;
+  featured: boolean;
+}
+import Overlay from "../../components/Overlay";
+const allPosts = await Astro.glob<Frontmatter>("../post/*.md");
+const posts = allPosts
+  .filter((post) => !post.frontmatter.draft).filter((post)=>post.frontmatter.featured)
+  .sort(function (p1, p2) {
+    let a = p1.frontmatter.date.split("/");
+    let b = p2.frontmatter.date.split("/");
+    return (
+      parseInt(b[2]) - parseInt(a[2]) ||
+      parseInt(b[1]) - parseInt(a[1]) ||
+      parseInt(b[0]) - parseInt(a[0])
+    );
+  });
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gopal Kaul | Blog</title>
+  </head>
+  <body class="bg-background text-white mx-8 lg:mx-60 pt-20">
+    <h3 class="text-7xl font-bold text-neonBlue mb-4">My Blog</h3>
+    <p>My blog, where I pen down my thoughts.</p>
+    <p>Here are some of the blog posts of mine, which I think you&apos; like : </p>
+    <ul>
+      {
+        posts.map((post) => {
+          return (
+            <li class="border-2 border-background hover:border-neonBlue px-5 py-2.5 rounded-md">
+              <a href={post.url}>
+                <h3 class="font-semibold text-2xl text-neonBlue">
+                  {post.frontmatter.title}
+                </h3>
+                <p>Written on : {post.frontmatter.date}</p>
+                <p>{post.frontmatter.description}</p>
+              </a>
+            </li>
+          );
+        })
+      }
+    </ul>
+    <p class="mb-4">Click here to read all my blogs till date : </p>
+    <a href="blog/1" class="py-2.5 px-4 bg-neonBlue rounded-md">Read All</a>
+    <Overlay />
+  </body>
+</html>
