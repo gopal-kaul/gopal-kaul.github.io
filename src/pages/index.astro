@@ -4,10 +4,26 @@ import Home from "../components/Home.jsx";
 import About from "../components/About.jsx";
 import Work from "../components/Work";
 ---
+
 <Layout title="Gopal Kaul | Home">
-  <main>
-    <Home client:visible />
-    <section id="about"><About /></section>
-    <section id="experience"><Work client:visible /></section>
-  </main>
+  <div
+    class="snap-y h-screen w-full no-scrollbar snap-mandatory snap-always scroll-smooth overflow-y-scroll"
+  >
+    <div class="snap-start h-screen">
+      <Home client:visible />
+    </div>
+    <section id="about" class="snap-start h-screen"><About /></section>
+    <section id="experience" class="snap-start">
+      <Work client:visible />
+    </section>
+  </div>
+  <style>
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none; 
+      scrollbar-width: none; 
+    }
+  </style>
 </Layout>
