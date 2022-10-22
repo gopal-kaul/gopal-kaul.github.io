@@ -12,13 +12,12 @@ export default function About() {
               Hey, Gopal here! I&apos;m your friendly neighbourhood geek!
             </h1>
           </div>
-          <div className="mt-5 ml-5 relative border-2 border-light w-[80%] h-[80%] sm:w-80 sm:h-80 aspect-square rounded-md">
+          <div className="mt-5 ml-5 relative border-2 border-light hover:border-neonBlue w-[80%] h-[80%] sm:w-80 sm:h-80 aspect-square rounded-md">
             <img
               className="object-cover -translate-x-5 hover:translate-x-0 hover:translate-y-0 transition-transform duration-500 ease-in-out -translate-y-5 rounded-md"
               src="/Gopal.webp"
               alt="Headshot"
             /></div>
-            {/* <div className="border-2 border-light -z-10 absolute top-5 left-5 rounded-md w-[80%] h-auto sm:w-80 sm:h-80"></div> */}
         </div>
       </div>
     </div>
