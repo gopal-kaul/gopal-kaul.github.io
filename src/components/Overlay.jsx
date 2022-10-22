@@ -8,24 +8,28 @@ export default function Overlay() {
         <div className="flex flex-col gap-4 items-center ">
           <a
             rel="noreferrer noopener"
+            href="https://github.com/gopal-kaul/"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
             <FiGithub />
           </a>
           <a
             rel="noreferrer noopener"
+            href="https://www.linkedin.com/in/gopal-kaul/"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
             <FiLinkedin />
           </a>
           <a
             rel="noreferrer noopener"
+            href="https://open.spotify.com/user/1xr1nqgy1t0n47dhj23h1xaev"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
             <FaSpotify />
           </a>
           <a
             rel="noreferrer noopener"
+            href="https://discord.com/users/545099023976235029"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
             <FaDiscord />
