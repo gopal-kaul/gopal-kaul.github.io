@@ -4,7 +4,7 @@ export default function Home() {
     <div className="min-h-screen">
       <div className="pt-32 md:pt-40 text-white">
         <h1 className="text-xl text-neonBlue">Hey, my name is</h1>
-        <h1 className="text-6xl md:text-7xl">Gopal Kaul.</h1>
+        <h1 className="text-6xl md:text-7xl hover:text-neonBlue">Gopal Kaul.</h1>
         <div className="flex flex-row text-2xl md:text-4xl whitespace-nowrap">
           <h2>I&apos;m a</h2> &nbsp;
           <div className="text-light">
