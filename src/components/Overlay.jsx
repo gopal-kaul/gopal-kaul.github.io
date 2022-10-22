@@ -9,6 +9,7 @@ export default function Overlay() {
           <a
             rel="noreferrer noopener"
             href="https://github.com/gopal-kaul/"
+            target="_blank"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
             <FiGithub />
@@ -16,12 +17,14 @@ export default function Overlay() {
           <a
             rel="noreferrer noopener"
             href="https://www.linkedin.com/in/gopal-kaul/"
+            target="_blank"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
             <FiLinkedin />
           </a>
           <a
             rel="noreferrer noopener"
+            target="_blank"
             href="https://open.spotify.com/user/1xr1nqgy1t0n47dhj23h1xaev"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
@@ -29,6 +32,7 @@ export default function Overlay() {
           </a>
           <a
             rel="noreferrer noopener"
+            target="_blank"
             href="https://discord.com/users/545099023976235029"
             className="hover:-translate-y-1 hover:text-neonBlue hover:scale-110 transition-all"
           >
