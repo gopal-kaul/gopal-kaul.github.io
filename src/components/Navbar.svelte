@@ -30,8 +30,10 @@
       <Icon src={BiMenu} color="#b0cdf1" className="text-xl text-light font-bold" />
     </button>
     {#if isOpen}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
       <div
         transition:fade
+        on:click={()=>{isOpen=!isOpen}}
         class="flex flex-col gap-2 items-end bg-background w-full top-full absolute"
       >
         <a href="#home">Home</a>
