@@ -20,5 +20,3 @@ Suddenly, I realised that Svelte had inbuilt transitions! I immediately looked i
 I really like how Svelte works, and it compiles down to plain ol' JavaScript! That means it's performance is amazing! I'll be making more components of this site in Svelte from now. I don't know if Svelte can be the React killer, but I'm excited for the future of Svelte.  
 
 Also, if you're wondering how I'm mixing and matching React and Svelte, then I'd like to introduce you to the wonderful <a href="https://astro.build/" target="_blank">Astro</a>, which is a JavaScript framework which lets you create blazingly fast sites.
-Also, if you're wondering how I'm mixing and matching React and Svelte, then I'd like to introduce you to the wonderful <a href="https://astro.build/" target="_blank">Astro</a>, which is a JavaScript framework which lets you create blazingly fast sites.
-Also, if you're wondering how I'm mixing and matching React and Svelte, then I'd like to introduce you to the wonderful <a href="https://astro.build/" target="_blank">Astro</a>, which is a JavaScript framework which lets you create blazingly fast sites.
