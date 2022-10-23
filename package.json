@@ -12,13 +12,16 @@
   "dependencies": {
     "astro": "^1.1.3",
     "react-icons": "^4.4.0",
+    "svelte-icons-pack": "^2.0.0",
     "typewriter-effect": "^2.19.0"
   },
   "devDependencies": {
     "@astrojs/react": "^1.1.1",
+    "@astrojs/svelte": "^1.0.2",
     "@astrojs/tailwind": "^1.0.0",
     "@tailwindcss/typography": "^0.5.7",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0"
+    "react-dom": "^18.0.0",
+    "svelte": "^3.46.4"
   }
 }
