@@ -42,7 +42,7 @@ export default function Work() {
     <div className="min-h-screen text-white">
       <div className="pt-32">
         <div className="flex flex-row items-center gap-4 whitespace-nowrap text-light">
-          <h3 className="text-3xl">Previous Work Experience</h3>
+          <h3 className="text-[1.5rem]">Previous Work Experience</h3>
           <hr className="text-4xl w-60" />
         </div>
         <div className="flex flex-col md:flex-row pt-4 gap-4">
