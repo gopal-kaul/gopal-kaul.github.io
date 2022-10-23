@@ -24,8 +24,8 @@ export default function Projects() {
           <hr className="text-4xl w-60" />
         </div>
         <div className="flex flex-col md:flex-row pt-4 gap-4">
-          {/* <div className="md:hidden flex flex-row overflow-scroll">
-            {experience.map((item, idx) => (
+          <div className="md:hidden flex flex-row overflow-scroll">
+            {projects.map((item, idx) => (
               <div
                 className={`${
                   idx === selected
@@ -35,10 +35,10 @@ export default function Projects() {
                 onClick={() => setSelected(idx)}
                 key={idx}
               >
-                {item.company}
+                {item.name}
               </div>
             ))}
-          </div> */}
+          </div>
           <div className="hidden md:w-[30%] md:flex md:flex-col">
             {projects.map((item, idx) => (
               <div
@@ -81,13 +81,6 @@ export default function Projects() {
             <p className="text-gray-400 pb-4 mt-4">
               {projects[selected].info}
             </p> 
-            {/* <ul className="list-disc marker:text-neonBlue pl-4">
-              {experience[selected].info.map((item) => (
-                <li className="text-gray-400" key={item}>
-                  {item}
-                </li>
-              ))}
-            </ul> */}
           </div>
         </div>
       </div>
