@@ -40,7 +40,7 @@ export default function Work() {
   ];
   return (
     <div className="min-h-screen text-white">
-      <div className="pt-32">
+      <div className="pt-32 md:pt-[15%]">
         <div className="flex flex-row items-center gap-4 whitespace-nowrap text-light">
           <h3 className="text-[1.5rem]">Previous Work Experience</h3>
           <hr className="text-4xl w-60" />
@@ -83,7 +83,7 @@ export default function Work() {
                 @ {experience[selected].company}
               </span>
             </h1>
-            <h2 className="text-gray-400 pb-4">
+            <h2 className="text-gray-400 pb-4 font-mono">
               {experience[selected].duration}
             </h2>
             <ul className="list-disc marker:text-neonBlue pl-4">

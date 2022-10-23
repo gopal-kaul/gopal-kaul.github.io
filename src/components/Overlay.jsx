@@ -4,7 +4,7 @@ import { FaDiscord, FaSpotify } from "react-icons/fa/index";
 export default function Overlay() {
   return (
     <div className="hidden md:block text-light">
-      <div className="fixed z-10 bottom-0 left-20">
+      <div className="fixed z-10 bottom-0 left-10">
         <div className="flex flex-col gap-4 items-center ">
           <a
             rel="noreferrer noopener"
@@ -41,7 +41,7 @@ export default function Overlay() {
           <div className="border-l-2 border-light h-24"></div>
         </div>
       </div>
-      <div className="fixed z-10 bottom-0 right-20">
+      <div className="fixed z-10 bottom-0 right-0">
         <div className="flex flex-col gap-4 items-center">
           <a
             rel="noreferrer noopener"
