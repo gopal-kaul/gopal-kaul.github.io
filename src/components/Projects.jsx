@@ -15,6 +15,11 @@ export default function Projects() {
       site: "https://fpluss.in/",
       info: "Some freelance work.",
     },
+    {
+      name: "Samvidh",
+      site: "http://samvidhtech.com/",
+      info: "Freelance work.",
+    },
   ];
   return (
     <div className="min-h-screen text-white">
@@ -78,9 +83,7 @@ export default function Projects() {
                 </a>
               )}
             </div>
-            <p className="text-gray-400 pb-4 mt-4">
-              {projects[selected].info}
-            </p> 
+            <p className="text-gray-400 pb-4 mt-4">{projects[selected].info}</p>
           </div>
         </div>
       </div>
