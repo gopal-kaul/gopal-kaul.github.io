@@ -16,7 +16,7 @@ export default function About() {
             <img
               className="object-cover -translate-x-5 hover:translate-x-0 hover:translate-y-0 transition-transform duration-500 ease-in-out -translate-y-5 rounded-md"
               src="/Gopal.webp"
-              alt="Headshot"
+              alt="Kishmish's Favourite Picture"
             /></div>
         </div>
       </div>
